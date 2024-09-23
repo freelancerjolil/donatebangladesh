@@ -37,51 +37,52 @@
   </head>
 
   <body class="bg-bg-body">
-    <header>
-      <nav>
-        <div class="navbar bg-bg-body w-11/12 mx-auto">
-          <div class="navbar-start">
-            <a
-              onclick="goToPage()"
-              class="btn btn-ghost text-xl lg:text-2xl bg-color-primary"
-              >Blog</a
-            >
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <img src="./assets/logo.png" alt="" />
-            <h1 class="text-xl lg:text-3xl text-color-primary1 font-bold ml-4">
-              Donate Bangladesh
-            </h1>
-          </div>
-          <div class="navbar-end">
-            <button class="flex justify-center items-center gap-2">
-              <img src="./assets/coin.png" alt="" />
-              <p>
-                <span class="text-xl lg:text-2xl font-semibold">5000</span>
-              </p>
-              <p class="text-xl lg:text-2xl">BDT</p>
-            </button>
-          </div>
+    <header
+      class="bg-transparent sticky top-0 z-50 transition-all duration-300 backdrop-blur-10"
+    >
+      <div class="navbar bg-transparent lg:w-11/12 w-full mx-auto">
+        <div class="navbar-start">
+          <a
+            onclick="goToPage()"
+            class="btn btn-ghost text-xl lg:text-2xl bg-color-primary"
+            >Blog</a
+          >
         </div>
-      </nav>
-    </header>
-    <main class="bg-white mt-10">
-      <section>
-        <!-- button section -->
-        <div class="bg-white flex mx-auto justify-center gap-6 mb-12 lg:pt-16">
-          <button class="btn font-bold bg-color-primary text-xl lg:text-2xl">
-            Donation
+        <div class="navbar-center hidden lg:flex">
+          <img src="./assets/logo.png" alt="" />
+          <h1 class="text-xl lg:text-3xl text-color-primary1 font-bold ml-4">
+            Donate Bangladesh
+          </h1>
+        </div>
+        <div class="navbar-end">
+          <button class="flex justify-center items-center gap-2">
+            <img src="./assets/coin.png" alt="" />
+            <p>
+              <span class="text-xl lg:text-2xl font-semibold">5000</span>
+            </p>
+            <p class="text-xl lg:text-2xl">BDT</p>
           </button>
-          <button class="btn font-bold text-xl lg:text-2xl">History</button>
         </div>
+      </div>
+      <!-- button section -->
+      <div class="bg-white flex mx-auto justify-center gap-6 lg:pt-6 pt-0 pb-6">
+        <button class="btn font-bold bg-color-primary mt-8 text-xl lg:text-2xl">
+          Donation
+        </button>
+        <button class="btn font-bold text-xl mt-8 lg:text-2xl">History</button>
+      </div>
+    </header>
+
+    <main class="bg-white">
+      <section class="p-4">
         <!-- Card 1 -->
         <div
-          class="lg:w-11/12 w-full mx-auto flex justify-between items-center lg:p-4 p-2"
+          class="lg:w-11/12 w-full mx-auto flex flex-col lg:flex-row justify-between lg:mb-10 mb-5"
         >
-          <div class="w-1/2 justify-end border border-2 border-red-500">
+          <div class="lg:w-1/2 w-full text-center">
             <img src="./assets/noakhali.png" alt="" />
           </div>
-          <div class="w-1/2 border border-2 border-green-500">
+          <div class="lg:w-1/2 w-full">
             <button class="flex justify-center items-center gap-2 pt-4">
               <img class="w-full object-cover" src="./assets/coin.png" alt="" />
               <p>
@@ -89,10 +90,10 @@
               </p>
               <p class="text-xl lg:text-2xl">BDT</p>
             </button>
-            <h1 class="text-2xl font-bold mt-10">
+            <h1 class="text-2xl font-bold text-center lg:text-left mt-10">
               Donate for Flood at Noakhali, Bangladesh
             </h1>
-            <p class="w-4/6 mt-5">
+            <p class="lg:w-4/6 w-full mt-5 text-center lg:text-left">
               Noakhali has been severely hit by recent floods, displacing
               families and causing widespread destruction. Your donation can
               help provide urgent relief, including food, water, medical aid,
@@ -111,11 +112,13 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="w-11/12 mx-auto flex justify-between items-center p-4">
-          <div class="w-1/2 justify-end border border-2 border-red-500">
+        <div
+          class="lg:w-11/12 w-full mx-auto flex flex-col lg:flex-row justify-between lg:mb-10 mb-5"
+        >
+          <div class="lg:w-1/2 w-full">
             <img src="./assets/feni.png" alt="" />
           </div>
-          <div class="w-1/2 border border-2 border-green-500">
+          <div class="lg:w-1/2 w-full">
             <button class="flex justify-center items-center gap-2 pt-4">
               <img class="w-full object-cover" src="./assets/coin.png" alt="" />
               <p>
@@ -123,17 +126,16 @@
               </p>
               <p class="text-xl lg:text-2xl">BDT</p>
             </button>
-            <h1 class="text-2xl font-bold mt-10">
-              Donate for Flood Relief in Feni,Bangladesh
+            <h1 class="text-2xl font-bold text-center lg:text-left mt-10">
+              Donate for Flood Relief in Feni, Bangladesh
             </h1>
-            <p class="w-4/6 mt-5">
-              Feni, Bangladesh, has been severely affected by devastating
-              floods, leaving thousands of families displaced and in desperate
-              need of help. Your donations will provide essential supplies like
-              food, clean water, medicine, and shelter to those most impacted.
-              Join us in supporting the flood victims and helping rebuild lives
-              in this time of crisis. Every contribution, no matter how small,
-              can make a huge difference.
+            <p class="lg:w-4/6 w-full mt-5 text-center lg:text-left">
+              Feni has been severely hit by recent floods, displacing families
+              and causing widespread destruction. Your donation can help provide
+              urgent relief, including food, water, medical aid, and shelter to
+              those in need. Stand with us in supporting the affected
+              communities and help them recover from this disaster. Every
+              contribution counts and will bring hope to those affected.
             </p>
             <div class="w-full">
               <input
@@ -146,11 +148,13 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="w-11/12 mx-auto flex justify-between items-center p-4">
-          <div class="w-1/2 justify-end border border-2 border-red-500">
-            <img src="./assets/quota-protest.png" alt="" />
+        <div
+          class="lg:w-11/12 w-full mx-auto flex flex-col lg:flex-row justify-between items-center"
+        >
+          <div class="lg:w-1/2 w-full justify-end">
+            <img src="./assets/noakhali.png" alt="" />
           </div>
-          <div class="w-1/2 border border-2 border-green-500">
+          <div class="lg:w-1/2 w-full">
             <button class="flex justify-center items-center gap-2 pt-4">
               <img class="w-full object-cover" src="./assets/coin.png" alt="" />
               <p>
@@ -158,17 +162,16 @@
               </p>
               <p class="text-xl lg:text-2xl">BDT</p>
             </button>
-            <h1 class="text-2xl font-bold mt-10">
+            <h1 class="text-2xl font-bold text-center lg:text-left mt-10">
               Aid for Injured in the Quota Movement
             </h1>
-            <p class="w-4/6 mt-5">
-              The Quota Movement has left many individuals injured while
-              advocating for equal rights and opportunities. Your support can
-              help provide medical assistance, rehabilitation, and financial aid
-              to those affected. Join us in standing by the injured and ensuring
-              they receive the care and support they deserve. Every contribution
-              helps to heal and empower those who have been hurt during this
-              critical movement.
+            <p class="lg:w-4/6 w-full mt-5 text-center lg:text-left">
+              Quota Movement has been severely hit by recent floods, displacing
+              families and causing widespread destruction. Your donation can
+              help provide urgent relief, including food, water, medical aid,
+              and shelter to those in need. Stand with us in supporting the
+              affected communities and help them recover from this disaster.
+              Every contribution counts and will bring hope to those affected.
             </p>
             <div class="w-full">
               <input
