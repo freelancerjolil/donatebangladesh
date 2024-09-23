@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faq</title>
+    <!-- daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "color-primary": "#B4F461",
+              "color-p": "#737373",
+              "bg-body": "#F9F7F3",
+              "color-primary1": "#111111",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="mx-auto bg-bg-body">
+    <header>
+      <nav class="w-11/12 mx-auto">
+        <div class="navbar bg-bg-body mx-auto">
+          <div class="navbar-start">
+            <a
+              onclick="goToPage()"
+              class="btn btn-ghost text-xl lg:text-2xl bg-color-primary"
+              >Home</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <img src="./assets/logo.png" alt="" />
+            <h1 class="text-xl lg:text-3xl text-color-primary1 font-bold ml-4">
+              Donate Bangladesh
+            </h1>
+          </div>
+          <div class="navbar-end">
+            <button class="flex justify-center items-center gap-2">
+              <img src="./assets/coin.png" alt="" />
+              <p>
+                <span class="text-xl lg:text-2xl font-semibold">5000</span>
+              </p>
+              <p class="text-xl lg:text-2xl">BDT</p>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-white">
+      <section class="w-11/12 mx-auto pt-8">
+        <h1 class="text-xl lg:text-5xl font-bold">
+          Frequently Asked Questions (FAQs)
+        </h1>
+        <!-- FAQs-1 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border mt-5"
+        >
+          <div class="collapse-title text-2xl font-medium">
+            1. What is a donation?
+          </div>
+          <div class="collapse-content text-2xl">
+            <p>
+              A donation is a voluntary gift or contribution of money, goods, or
+              services, typically given to support a cause, charity, or
+              organization. <br />
+              Donations are often made without expecting anything in return and
+              are usually for non-profit organizations or community efforts.
+            </p>
+          </div>
+        </div>
+        <!-- FAQs-2 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border mt-5"
+        >
+          <div class="collapse-title text-2xl font-medium">
+            2. Is my donation tax-deductible?
+          </div>
+          <div class="collapse-content text-2xl">
+            <p>
+              In many countries, donations made to registered charities or
+              non-profit organizations can be tax-deductible. <br />
+              To claim a deduction, you will usually need to ensure the
+              organization is a recognized charity by your tax authority and
+              retain receipts for your donation. <br />
+              It's best to consult your local tax regulations or an accountant
+              for specific details.
+            </p>
+          </div>
+        </div>
+        <!-- FAQs-3 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border mt-5"
+        >
+          <div class="collapse-title text-2xl font-medium">
+            3. Can I donate items instead of money?
+          </div>
+          <div class="collapse-content text-2xl">
+            <p>
+              Yes, many organizations accept donations in the form of goods such
+              as clothing, food, school supplies, or other materials. <br />
+              Check with the specific organization to find out what types of
+              items they are currently accepting and if they have any guidelines
+              or restrictions.
+            </p>
+          </div>
+        </div>
+        <!-- FAQs-4 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border mt-5"
+        >
+          <div class="collapse-title text-2xl font-medium">
+            4. How do I donate online securely?
+          </div>
+          <div class="collapse-content text-2xl">
+            <p>
+              When donating online, ensure the website you are using is secure
+              by checking for: A URL that starts with "https" (the "s" stands
+              for secure). <br />
+              Verified payment gateways (e.g., PayPal, Stripe). <br />
+              Privacy policies explaining how your information will be used.
+              <br />
+              Additionally, avoid sharing sensitive information unless
+              necessary, and keep records of your transactions.
+            </p>
+          </div>
+        </div>
+        <!-- FAQs-5 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 bg-base-200 border mt-5"
+        >
+          <div class="collapse-title text-2xl font-medium">
+            5. How can I ensure my donation is going to a legitimate cause?
+          </div>
+          <div class="collapse-content text-2xl">
+            <p>
+              To ensure your donation is going to a legitimate organization:
+              Research the organization’s track record.<br />
+              Check if they are registered with appropriate government agencies
+              or charity watchdogs. <br />
+              Review financial reports and how they allocate funds. <br />
+              Read reviews or testimonials from other donors.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function goToPage() {
+        window.location.href = "./index.html";
+      }
+    </script>
+  </body>
+</html>
