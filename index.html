@@ -66,29 +66,37 @@
       </div>
       <!-- button section -->
       <div class="bg-white flex mx-auto justify-center gap-6 lg:pt-6 pt-0 pb-6">
-        <button class="btn font-bold bg-color-primary mt-8 text-xl lg:text-2xl">
+        <button
+          id="donation-tab"
+          class="btn font-bold bg-color-primary mt-8 text-xl lg:text-2xl"
+        >
           Donation
         </button>
-        <button class="btn font-bold text-xl mt-8 lg:text-2xl">History</button>
+        <button id="history-tab" class="btn font-bold text-xl mt-8 lg:text-2xl">
+          History
+        </button>
       </div>
     </header>
 
     <main class="bg-white">
-      <section class="p-4">
+      <section id="gayeb-ul" class="p-4">
         <!-- Card 1 -->
         <div
           class="lg:w-11/12 w-full mx-auto flex flex-col lg:flex-row justify-between lg:mb-10 mb-5"
         >
-          <div class="lg:w-1/2 w-full text-center">
+          <div class="lg:w-1/2 w-full flex justify-center items-center">
             <img src="./assets/noakhali.png" alt="" />
           </div>
           <div class="lg:w-1/2 w-full">
             <button class="flex justify-center items-center gap-2 pt-4">
               <img class="w-full object-cover" src="./assets/coin.png" alt="" />
               <p>
-                <span class="text-xl lg:text-2xl font-semibold">0</span>
+                <span
+                  id="donate-box-1"
+                  class="text-xl lg:text-2xl font-semibold"
+                  >0</span
+                >
               </p>
-              <p class="text-xl lg:text-2xl">BDT</p>
             </button>
             <h1 class="text-2xl font-bold text-center lg:text-left mt-10">
               Donate for Flood at Noakhali, Bangladesh
@@ -105,26 +113,32 @@
               <input
                 type="text"
                 placeholder="Write Donation Amount"
+                id="input-box1"
                 class="input input-bordered w-full mt-7"
               />
             </div>
-            <button class="btn w-full mt-4 bg-color-primary">Donate Now</button>
+            <button id="donate-now" class="btn w-full mt-4 bg-color-primary">
+              Donate Now
+            </button>
           </div>
         </div>
         <!-- Card 2 -->
         <div
           class="lg:w-11/12 w-full mx-auto flex flex-col lg:flex-row justify-between lg:mb-10 mb-5"
         >
-          <div class="lg:w-1/2 w-full">
+          <div class="lg:w-1/2 w-full flex justify-center items-center">
             <img src="./assets/feni.png" alt="" />
           </div>
           <div class="lg:w-1/2 w-full">
             <button class="flex justify-center items-center gap-2 pt-4">
               <img class="w-full object-cover" src="./assets/coin.png" alt="" />
               <p>
-                <span class="text-xl lg:text-2xl font-semibold">0</span>
+                <span
+                  id="donate-box-2"
+                  class="text-xl lg:text-2xl font-semibold"
+                  >0</span
+                >
               </p>
-              <p class="text-xl lg:text-2xl">BDT</p>
             </button>
             <h1 class="text-2xl font-bold text-center lg:text-left mt-10">
               Donate for Flood Relief in Feni, Bangladesh
@@ -139,28 +153,34 @@
             </p>
             <div class="w-full">
               <input
+                id="input-box2"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full mt-7"
               />
             </div>
-            <button class="btn w-full mt-4 bg-color-primary">Donate Now</button>
+            <button id="donateBtn2" class="btn w-full mt-4 bg-color-primary">
+              Donate Now
+            </button>
           </div>
         </div>
         <!-- Card 3 -->
         <div
           class="lg:w-11/12 w-full mx-auto flex flex-col lg:flex-row justify-between items-center"
         >
-          <div class="lg:w-1/2 w-full justify-end">
-            <img src="./assets/noakhali.png" alt="" />
+          <div class="lg:w-1/2 w-full flex justify-center items-center">
+            <img src="./assets/quota-protest.png" alt="" />
           </div>
           <div class="lg:w-1/2 w-full">
             <button class="flex justify-center items-center gap-2 pt-4">
               <img class="w-full object-cover" src="./assets/coin.png" alt="" />
               <p>
-                <span class="text-xl lg:text-2xl font-semibold">0</span>
+                <span
+                  id="donate-box-3"
+                  class="text-xl lg:text-2xl font-semibold"
+                  >0</span
+                >
               </p>
-              <p class="text-xl lg:text-2xl">BDT</p>
             </button>
             <h1 class="text-2xl font-bold text-center lg:text-left mt-10">
               Aid for Injured in the Quota Movement
@@ -175,12 +195,15 @@
             </p>
             <div class="w-full">
               <input
+                id="input-box3"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full mt-7"
               />
             </div>
-            <button class="btn w-full mt-4 bg-color-primary">Donate Now</button>
+            <button id="donateBtn3" class="btn w-full mt-4 bg-color-primary">
+              Donate Now
+            </button>
           </div>
         </div>
       </section>
