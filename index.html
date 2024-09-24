@@ -37,10 +37,8 @@
   </head>
 
   <body class="bg-bg-body">
-    <header
-      class="bg-transparent sticky top-0 z-50 transition-all duration-300 backdrop-blur-10"
-    >
-      <div class="navbar bg-transparent lg:w-11/12 w-full mx-auto">
+    <header class="bg-white sticky top-0 z-10 backdrop-blur-lg">
+      <div class="navbar bg-opacity-30 lg:w-11/12 w-full mx-auto">
         <div class="navbar-start">
           <a
             onclick="goToPage()"
@@ -66,7 +64,9 @@
         </div>
       </div>
       <!-- button section -->
-      <div class="bg-white flex mx-auto justify-center gap-6 lg:pt-6 pt-0 pb-6">
+      <div
+        class="bg-white bg-opacity-20 flex mx-auto justify-center gap-6 lg:pt-6 pt-0 pb-6"
+      >
         <button
           id="donation-tab"
           class="btn font-bold bg-color-primary mt-8 text-xl lg:text-2xl"
@@ -125,18 +125,26 @@
             >
               Donate Now
             </button>
-            <dialog id="donateModal" class="modal modal-bottom sm:modal-middle">
-              <div class="modal-box">
-                <h3 class="text-lg font-bold">Confirm Your Donation</h3>
-                <p id="modalDonationAmount">Amount: $0.00</p>
-                <!-- Display donation amount here -->
+            <dialog id="my_modal_1" class="modal">
+              <div
+                class="modal-box text-center flex flex-col items-center justify-center"
+              >
+                <h3 class="text-5xl text-center font-extrabold mb-4">
+                  Congrates!
+                </h3>
+                <img src="./assets/coin.png" alt="" />
+                <p class="py-4">
+                  You have donated
+                  <span id="modalDonationAmount"></span>.
+                </p>
+                <h4 class="text-2xl text-center font-extrabold">
+                  successfully
+                </h4>
                 <div class="modal-action">
-                  <button id="confirmDonation" class="btn">
-                    Confirm Donation
-                  </button>
-                  <button class="btn" onclick="donateModal.close()">
-                    Cancel
-                  </button>
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
                 </div>
               </div>
             </dialog>
@@ -227,6 +235,11 @@
           </div>
         </div>
       </section>
+      <!-- History Section -->
+      <div
+        id="history-list"
+        class="lg:w-11/12 w-full flex flex-col justify-center items-center p-4 hidden"
+      ></div>
     </main>
 
     <script src="./js/index.js"></script>
