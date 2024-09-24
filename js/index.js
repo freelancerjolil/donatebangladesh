@@ -5,7 +5,7 @@ function goToPage() {
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   if (window.scrollY > 50) {
-    header.classList.add("bg-white", "shadow-lg", "backdrop-blur-md");
+    header.classList.add("bg-white", "shadow-lg", "backdrop-blur-lg");
     header.classList.remove("bg-transparent-30", "backdrop-blur-0");
   } else {
     header.classList.add("bg-transparent", "backdrop-blur-0");
@@ -39,7 +39,6 @@ function addHistoryEntry(donationBoxId, amount) {
   } else {
     message = `Donation Amount: $${amount.toFixed(2)}`;
   }
-
   const historyDiv = document.createElement("div");
   historyDiv.style.border = "1px solid #ddd";
   historyDiv.style.borderRadius = "8px";
@@ -51,21 +50,17 @@ function addHistoryEntry(donationBoxId, amount) {
     <p class="text-lg font-bold text-gray-700">${message}</p>
     <p class="text-sm text-gray-500">Date: ${currentDate}</p>
   `;
-
   historyList.appendChild(historyDiv);
 }
 
-// Input Validation Function
 function setInputValidation(inputBoxId) {
   const inputBox = document.getElementById(inputBoxId);
   inputBox.addEventListener("input", function () {
     const mainAmount = parseFloat(mainBalance.innerText);
     const inputValue = parseFloat(inputBox.value);
-
-    // Validate input value against main balance
     if (inputValue > mainAmount) {
       alert("You cannot donate more than your available balance.");
-      inputBox.value = ""; // Reset input box
+      inputBox.value = "";
     }
   });
 }
@@ -78,7 +73,7 @@ donateNowButton.addEventListener("click", function () {
   if (!isNaN(inputbox1) && inputbox1 > 0) {
     const mainAmount = parseFloat(mainBalance.innerText);
     if (mainAmount - inputbox1 < 0) {
-      alert("Insufficient balance! Donation cannot be processed.");
+      alert("Insufficient balance!");
     } else {
       totalDonation1 += inputbox1;
       mainBalance.innerText = (mainAmount - inputbox1).toFixed(2);
@@ -88,10 +83,10 @@ donateNowButton.addEventListener("click", function () {
 
       // Show Congratulations Modal
       modalDonationAmount.innerText = `Amount: ${inputbox1.toFixed(2)}`;
-      congratulationsModal.showModal(); // Show the Congratulations modal
+      congratulationsModal.showModal();
     }
   } else {
-    alert("Please enter a valid number greater than 0");
+    alert("Please enter a valid number");
   }
   document.getElementById("input-box1").value = "";
 });
@@ -112,7 +107,6 @@ donateBtn2.addEventListener("click", function () {
         totalDonation2.toFixed(2);
       addHistoryEntry("donate-box-2", inputbox2);
 
-      // Show Congratulations Modal
       modalDonationAmount.innerText = `Amount: ${inputbox2.toFixed(2)}`;
       congratulationsModal.showModal(); // Show the Congratulations modal
     }
@@ -140,7 +134,7 @@ donateBtn3.addEventListener("click", function () {
 
       // Show Congratulations Modal
       modalDonationAmount.innerText = `Amount: ${inputbox3.toFixed(2)}`;
-      congratulationsModal.showModal(); // Show the Congratulations modal
+      congratulationsModal.showModal();
     }
   } else {
     alert("Please enter a valid number");
@@ -168,5 +162,5 @@ donationTab.addEventListener("click", function () {
   donationTab.classList.add("bg-color-primary");
   historyTab.classList.remove("bg-color-primary");
   document.getElementById("gayeb-ul").classList.remove("hidden");
-  historyList.style.display = "none"; // Hide history
+  historyList.style.display = "none";
 });
