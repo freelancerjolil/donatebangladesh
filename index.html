@@ -118,9 +118,28 @@
                 class="input input-bordered w-full mt-7"
               />
             </div>
-            <button id="donate-now" class="btn w-full mt-4 bg-color-primary">
+            <button
+              onclick="my_modal_5.showModal()"
+              id="donate-now"
+              class="btn w-full mt-4 bg-color-primary"
+            >
               Donate Now
             </button>
+            <dialog id="donateModal" class="modal modal-bottom sm:modal-middle">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Confirm Your Donation</h3>
+                <p id="modalDonationAmount">Amount: $0.00</p>
+                <!-- Display donation amount here -->
+                <div class="modal-action">
+                  <button id="confirmDonation" class="btn">
+                    Confirm Donation
+                  </button>
+                  <button class="btn" onclick="donateModal.close()">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
         <!-- Card 2 -->
